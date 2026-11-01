@@ -179,10 +179,44 @@ section .heading {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 768px) {
-  /*_____FOR DESKTOP_____*/
-
+@media (min-width: 500px) {
   section {
-    width: 35vw;
+    width: 80vw;
+  }
+}
+
+@media (min-width: 550px) {
+  section {
+    width: 70vw;
+  }
+}
+
+/*_____FOR DESKTOP_____*/
+
+@media (min-width: 768px) {
+  section {
+    width: 45vw;
+  }
+
+  #contact-form #name,
+  #contact-form #email,
+  #contact-form #subject {
+    padding: 0 20px;
+  }
+
+  #contact-form #message {
+    padding: 5px 20px;
+  }
+}
+
+@media (min-width: 800px) {
+  section {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  section {
+    width: 40vw;
   }
 }
