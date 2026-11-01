@@ -79,7 +79,7 @@ body {
 /* MAIN */
 
 main {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,7 +88,7 @@ main {
 /* CONTACT FORM SECTION */
 
 section {
-  width: 85vw;
+  width: 80vw;
   margin: 0 auto;
 }
 
@@ -104,7 +104,7 @@ section .heading {
   margin: auto;
   background: pink;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 25px;
   box-shadow: 0 2px 5px #9c9595;
 }
 
@@ -145,10 +145,10 @@ section .heading {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 786px) {
+@media (min-width: 768px) {
   /*_____FOR DESKTOP_____*/
 
   section {
-    width: 600px;
+    width: 35vw;
   }
 }
