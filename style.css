@@ -25,7 +25,8 @@ body {
     sans-serif;
 }
 
-/* Button-1 */
+/* Global buttons */
+/* btn-1 */
 
 .btn-1 {
   background-color: hotpink;
@@ -42,6 +43,26 @@ body {
   color: #fff;
 }
 
+/* x-btn */
+
+.x-btn {
+  background-color: inherit;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
+}
+
+/* MAIN */
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Heading */
 
 .heading {
@@ -53,9 +74,12 @@ body {
 .error-msg,
 .success-msg {
   margin: 15px 0;
-  padding: 12px;
+  padding: 6px 12px;
   font-size: clamp(0.9rem, 4vw, 1.1rem);
   border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   display: none;
 }
 
@@ -64,7 +88,11 @@ body {
 .error-msg {
   background-color: rgb(254, 101, 101);
   color: #340000;
-  border: 2px solid red;
+  border: 1.5px solid red;
+}
+
+.error-msg .x-btn:hover {
+  background-color: rgb(198, 79, 79);
 }
 
 /* Success Message */
@@ -72,17 +100,12 @@ body {
 .success-msg {
   background-color: lightgreen;
   color: #135000;
-  border: 2px solid rgb(2, 218, 2);
+  border: 1.5px solid rgb(2, 218, 2);
   border-radius: 10px;
 }
 
-/* MAIN */
-
-main {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.success-msg .x-btn:hover {
+  background-color: rgb(102, 170, 102);
 }
 
 /* CONTACT FORM SECTION */
@@ -133,12 +156,14 @@ section .heading {
   height: 35px;
   padding: 0 10px;
   border: 1px solid #fff;
+  box-shadow: 0 0.6px 1.5px #7a7272;
 }
 
 #contact-form #message {
   height: 100px;
   padding: 5px 10px;
   border: 1px solid #fff;
+  box-shadow: 0 0.6px 1.5px #7a7272;
 }
 
 #contact-form #name:hover,
