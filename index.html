@@ -9,6 +9,7 @@
     <title>Elevvo Contact Form</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="assets/icons/font-awesome-library/webfonts-css/all.css">
 </head>
 <body>
     <main>
@@ -17,10 +18,17 @@
                 <h2 class="heading">Contact Form</h2>
 
                 <div class="error-msg">
-                    <strong id="error"></strong>
+                    <strong id="error">This is an error!</strong>
+                    <button class="x-btn">
+                        <i class="fas fa-xmark"></i>
+                    </button>
                 </div>
+                
                 <div class="success-msg">
-                    <strong id="success"></strong>
+                    <strong id="success">Success!</strong>
+                    <button class="x-btn">
+                        <i class="fas fa-xmark"></i>
+                    </button>
                 </div>
 
                 <label for="name">Full Name:</label>
