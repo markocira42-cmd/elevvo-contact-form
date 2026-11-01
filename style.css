@@ -9,7 +9,7 @@
 /* GLOBAL */
 
 body {
-  background-color: #d7d6d6;
+  background-color: #daddff;
   color: #111;
   font-family:
     system-ui,
@@ -24,6 +24,8 @@ body {
     'Helvetica Neue',
     sans-serif;
 }
+
+/* Button-1 */
 
 .btn-1 {
   background-color: hotpink;
@@ -40,8 +42,38 @@ body {
   color: #fff;
 }
 
+/* Heading */
+
 .heading {
   font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+/* Message-alerts */
+
+.error-msg,
+.success-msg {
+  margin: 15px 0;
+  padding: 12px;
+  font-size: clamp(0.9rem, 4vw, 1.1rem);
+  border: 2px solid red;
+  display: none;
+}
+
+/* Error-message */
+
+.error-msg {
+  background-color: rgb(254, 101, 101);
+  color: #340000;
+  border: 2px solid red;
+}
+
+/* Success Message */
+
+.success-msg {
+  background-color: lightgreen;
+  color: #135000;
+  border: 2px solid rgb(2, 218, 2);
+  border-radius: 10px;
 }
 
 /* MAIN */
@@ -62,7 +94,7 @@ section {
 
 section .heading {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 /* FORM */
