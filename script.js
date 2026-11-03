@@ -17,7 +17,7 @@ const closeSuccess = successDiv.querySelector('.x-success');
 
 // Single-purpose Functions
 
-const trim = (string) => {
+const format = (string) => {
   return string.trim();
 };
 
@@ -58,11 +58,11 @@ const clearFields = () => {
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  if (trim(name.value) === '') {
+  if (format(name.value) === '') {
     throwError('Please enter your full name!');
     removeSuccess();
     flashHighlight(name);
-  } else if (trim(email.value) === '') {
+  } else if (format(email.value) === '') {
     throwError('Please enter your email address!');
     removeSuccess();
     flashHighlight(email);
@@ -72,11 +72,11 @@ contactForm.addEventListener('submit', (e) => {
     );
     removeSuccess();
     flashHighlight(email);
-  } else if (trim(subject.value) === '') {
+  } else if (format(subject.value) === '') {
     throwError('Please enter a subject!');
     removeSuccess();
     flashHighlight(subject);
-  } else if (trim(message.value) === '') {
+  } else if (format(message.value) === '') {
     throwError('Please type in a message!');
     removeSuccess();
     flashHighlight(message);
@@ -85,10 +85,10 @@ contactForm.addEventListener('submit', (e) => {
     removeError();
 
     const submittedData = {
-      name: trim(name.value),
-      email: trim(email.value),
-      subject: trim(subject.value),
-      message: trim(message.value),
+      name: format(name.value),
+      email: format(email.value),
+      subject: format(subject.value),
+      message: format(message.value),
     };
 
     console.log('Form submitted!');
