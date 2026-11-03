@@ -107,3 +107,7 @@ closeSuccess.addEventListener('click', (e) => {
   e.stopPropagation();
   removeSuccess();
 });
+
+contactForm.addEventListener('input', (e) => {
+  removeError();
+});
