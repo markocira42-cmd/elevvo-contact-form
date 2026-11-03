@@ -57,6 +57,11 @@ contactForm.addEventListener('submit', (e) => {
   } else if (trim(email.value) === '') {
     throwError('Please enter your email address!');
     removeSuccess();
+  } else if (!email.validity.valid) {
+    throwError(
+      'Invalid email. Please enter a valid email address!'
+    );
+    removeSuccess();
   } else if (trim(subject.value) === '') {
     throwError('Please enter a subject!');
     removeSuccess();
