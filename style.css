@@ -54,10 +54,14 @@ body {
   font-size: 1rem;
 }
 
+.x-btn:active {
+  color: #fff;
+}
+
 /* MAIN */
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,7 +120,7 @@ main {
 
 section {
   width: 80vw;
-  margin: 0 auto;
+  margin: 7vh auto;
 }
 
 section .heading {
