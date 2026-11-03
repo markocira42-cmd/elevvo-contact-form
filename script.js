@@ -5,18 +5,19 @@ const email = contactForm.querySelector('#email');
 const subject = contactForm.querySelector('#subject');
 const message = contactForm.querySelector('#message');
 
-const errorDiv = document.querySelector('.error-div');
-const successDiv = document.querySelector('.success-div');
+const errorDiv = contactForm.querySelector('.error-div');
+const successDiv =
+  contactForm.querySelector('.success-div');
 
-const errorMsg = document.querySelector('#error');
-const successMsg = document.querySelector('#success');
+const errorMsg = errorDiv.querySelector('#error');
+const successMsg = successDiv.querySelector('#success');
 
-const closeError = document.querySelector('.x-error');
-const closeSuccess = document.querySelector('.x-success');
+const closeError = errorDiv.querySelector('.x-error');
+const closeSuccess = successDiv.querySelector('.x-success');
 
 // Single-purpose Functions
 
-const formatString = (string) => {
+const trim = (string) => {
   return string.trim();
 };
 
@@ -50,16 +51,16 @@ const clearFields = () => {
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  if (name.value === '') {
+  if (trim(name.value) === '') {
     throwError('Please enter your full name!');
     removeSuccess();
-  } else if (email.value === '') {
+  } else if (trim(email.value) === '') {
     throwError('Please enter your email address!');
     removeSuccess();
-  } else if (subject.value === '') {
+  } else if (trim(subject.value) === '') {
     throwError('Please enter a subject!');
     removeSuccess();
-  } else if (message.value === '') {
+  } else if (trim(message.value) === '') {
     throwError('Please type in your message!');
     removeSuccess();
   } else {
@@ -67,10 +68,10 @@ contactForm.addEventListener('submit', (e) => {
     removeError();
 
     const submittedData = {
-      name: name.value,
-      email: email.value,
-      subject: subject.value,
-      message: message.value,
+      name: trim(name.value),
+      email: trim(email.value),
+      subject: trim(subject.value),
+      message: trim(message.value),
     };
 
     console.log('Form submitted!');
