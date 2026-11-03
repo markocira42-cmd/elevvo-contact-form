@@ -39,6 +39,13 @@ const removeSuccess = () => {
   successDiv.classList.remove('show');
 };
 
+const flashHighlight = (field) => {
+  field.classList.add('highlight-field');
+  setTimeout(() => {
+    field.classList.remove('highlight-field');
+  }, 1000);
+};
+
 const clearFields = () => {
   name.value = '';
   email.value = '';
@@ -54,20 +61,25 @@ contactForm.addEventListener('submit', (e) => {
   if (trim(name.value) === '') {
     throwError('Please enter your full name!');
     removeSuccess();
+    flashHighlight(name);
   } else if (trim(email.value) === '') {
     throwError('Please enter your email address!');
     removeSuccess();
+    flashHighlight(email);
   } else if (!email.validity.valid) {
     throwError(
       'Invalid email. Please enter a valid email address!'
     );
     removeSuccess();
+    flashHighlight(email);
   } else if (trim(subject.value) === '') {
     throwError('Please enter a subject!');
     removeSuccess();
+    flashHighlight(subject);
   } else if (trim(message.value) === '') {
-    throwError('Please type in your message!');
+    throwError('Please type in a message!');
     removeSuccess();
+    flashHighlight(message);
   } else {
     throwSuccess('Message sent successfully!');
     removeError();
@@ -81,8 +93,6 @@ contactForm.addEventListener('submit', (e) => {
 
     console.log('Form submitted!');
     console.log(submittedData);
-
-    console.log(submittedData.name.length);
 
     clearFields();
   }
