@@ -69,43 +69,47 @@ main {
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
-/* Message-alerts */
+/* Message-divs */
 
-.error-msg,
-.success-msg {
+.error-div,
+.success-div {
   margin: 15px 0;
   padding: 6px 12px;
   font-size: clamp(0.9rem, 4vw, 1.1rem);
-  border: 2px solid red;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
-  display: none;
 }
 
-/* Error-message */
+/* Error-div */
 
-.error-msg {
+.error-div {
   background-color: rgb(254, 101, 101);
   color: #340000;
   border: 1.5px solid red;
 }
 
-.error-msg .x-btn:hover {
+.error-div .x-btn:hover {
   background-color: rgb(198, 79, 79);
 }
 
-/* Success Message */
+/* Success-div */
 
-.success-msg {
+.success-div {
   background-color: lightgreen;
   color: #135000;
   border: 1.5px solid rgb(2, 218, 2);
   border-radius: 10px;
 }
 
-.success-msg .x-btn:hover {
+.success-div .x-btn:hover {
   background-color: rgb(102, 170, 102);
+}
+
+/* Show message div */
+
+.show {
+  display: flex;
 }
 
 /* CONTACT FORM SECTION */
