@@ -86,7 +86,7 @@ contactForm.addEventListener('submit', (e) => {
 
     const submittedData = {
       name: format(name.value),
-      email: format(email.value),
+      email: format(email.value).toLowerCase(),
       subject: format(subject.value),
       message: format(message.value),
     };
