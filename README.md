@@ -13,7 +13,7 @@ A fully responsive, accessible contact form built from scratch using HTML5, CSS3
 
 ## Tech Stack
 - **HTML5:** Semantic markup and native form validation attributes.
-- **CSS3:** Custom properties, Flexbox, media queries, and transitions.
+- **CSS3:** Custom properties, Flexbox and media queries.
 - **Vanilla JavaScript (ES6+):** DOM manipulation and Event Listeners.
 
 ## Screenshots
